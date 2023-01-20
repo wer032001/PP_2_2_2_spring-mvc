@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns: th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+
+<table class="table-secondary table caption-top table-bordered">
+    <caption><h1>LIST CARS</h1></caption>
+    <thead>
+    <tr class="table-primary">
+    <th scope="col">id</th>
+    <th scope="col">Model</th>
+    <th scope="col">Color</th>
+    </tr>
+    </thead>
+    <tbody class="table-group-divider">
+    <tr th:each="cars: ${cars}">
+        <td th:text="${cars.getId()}">id</td>
+        <td th:text="${cars.getModel()}">model</td>
+        <td th:text="${cars.getColor()}">color</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
